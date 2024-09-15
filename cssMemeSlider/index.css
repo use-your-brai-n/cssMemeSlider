@@ -27,7 +27,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} 
 .text {
     display: flex;
     width: 50%;
@@ -107,8 +107,22 @@ input[name="control"] {
     .text-slide:nth-child(1) {
         display: none;
     }
-} 
-
+}
+@media (max-width: 37.5em) {
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .slider-controls {
+        margin: 0 auto;
+    }
+    .text {
+        align-self: flex-start;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
 
 
 
