@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: black;
+    background-color: grey;
 }
 .container {
     max-width: 90vw;
@@ -30,10 +30,12 @@ body {
     display: flex;
     width: 50%;
 }
+.text-slide {
+    width: 25%;
+}
 h3 {
      color: #ffff;
      white-space: nowrap;
-     text-align: left; 
 }
 .text-slide:nth-child(2) {
     display: none;
@@ -53,12 +55,20 @@ input[name="control"] {
 }
 .slider-controls > label {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 2.0rem;
+  height: 2.0rem;
   border-radius: 100%;
-  border: 1px #ffff solid;
+  border: .1rem #ffff solid;
+  margin: 0.2rem;
+  text-align: center;
 }
-
+.slider-controls > label:hover {
+    background-color: white;
+    cursor: pointer;
+}
+.slider-controls > label:active {
+    border: .1rem red solid;
+}
 #control1:checked ~ .slides {
     transform: translate(0);
 }
@@ -94,7 +104,8 @@ input[name="control"] {
     .text-slide:nth-child(1) {
         display: none;
     }
-}
+} 
+
 
 
 
