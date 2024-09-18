@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: grey;
+}
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
+}
+.slider {
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: .5s ease-out;
+}
+.slide {
+    width: 90vw;
+    align-self: center;
+}
+.slide-img {
+    width: 100vw;
+    min-width: 100vw;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.text {
+    display: flex;
+    width: 50%;
+}
+.text-slide {
+    width: 25%;
+}
+h3 {
+     color: #ffff;
+     font-size: 1.8rem;
+     white-space: nowrap;
+}
+.text-slide:nth-child(2) {
+    display: none;
+}
+.text-slide:nth-child(3) {
+    display: none;
+}
+.text-slide:nth-child(4) {
+    display: none;
+}
+input[name="control"] {
+    display: none;
+}
+.slider-controls {
+    display: flex;
+    margin-left: auto;
+}
+.slider-controls > label {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  border: .1rem #ffff solid;
+  margin: 0.2rem;
+  text-align: center;
+}
+.slider-controls > label:hover {
+    background-color: white;
+    cursor: pointer;
+}
+.slider-controls > label:active {
+    border: .1rem red solid;
+}
+#control1:checked ~ .slides {
+    transform: translate(0);
+}
+#control2:checked ~ .slides {
+    transform: translate(-90vw);
+}
+#control3:checked ~ .slides {
+    transform: translate(-180vw);
+}
+#control4:checked ~ .slides {
+    transform: translate(-270vw);
+}
+#control1:checked ~ .wrapper .slider-controls .btn:nth-child(1) {
+     background: #fff;
+}
+#control2:checked ~ .wrapper {
+    .text-slide:nth-child(2) {
+        display: block;
+    }
+    .text-slide:nth-child(1) {
+        display: none;
+    }
+    .slider-controls .btn:nth-child(2) { background: #fff; }
+
+}
+#control3:checked ~ .wrapper {
+    .text-slide:nth-child(3) {
+        display: block;
+    }
+    .text-slide:nth-child(1) {
+        display: none;
+    }
+    .slider-controls .btn:nth-child(3) { background: #fff; }
+}
+#control4:checked ~ .wrapper {
+    .text-slide:nth-child(4) {
+        display: block;
+    }
+    .text-slide:nth-child(1) {
+        display: none;
+    }
+    .slider-controls .btn:nth-child(4) { background: #fff; }
+}
+@media (max-width: 37.5em) {
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .slider-controls {
+        margin: 0 auto;
+    }
+    .text {
+        align-self: flex-start;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
