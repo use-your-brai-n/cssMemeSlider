@@ -84,6 +84,9 @@ input[name="control"] {
 #control4:checked ~ .slides {
     transform: translate(-270vw);
 }
+#control1:checked ~ .wrapper .slider-controls .btn:nth-child(1) {
+     background: #fff;
+}
 #control2:checked ~ .wrapper {
     .text-slide:nth-child(2) {
         display: block;
@@ -91,6 +94,8 @@ input[name="control"] {
     .text-slide:nth-child(1) {
         display: none;
     }
+    .slider-controls .btn:nth-child(2) { background: #fff; }
+
 }
 #control3:checked ~ .wrapper {
     .text-slide:nth-child(3) {
@@ -99,6 +104,7 @@ input[name="control"] {
     .text-slide:nth-child(1) {
         display: none;
     }
+    .slider-controls .btn:nth-child(3) { background: #fff; }
 }
 #control4:checked ~ .wrapper {
     .text-slide:nth-child(4) {
@@ -107,6 +113,7 @@ input[name="control"] {
     .text-slide:nth-child(1) {
         display: none;
     }
+    .slider-controls .btn:nth-child(4) { background: #fff; }
 }
 @media (max-width: 37.5em) {
     .wrapper {
